@@ -30,7 +30,6 @@ import github.C2F4n.common.recipe.MixingRecipe;
 import github.C2F4n.common.recipe.MixingRecipeInput;
 import github.C2F4n.common.recipe.ingredient.FluidIngredient;
 import github.C2F4n.registry.ModBlockEntities;
-import github.C2F4n.registry.ModMenuTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -409,7 +408,7 @@ public class BasicFluidMixerBlockEntity extends TileEntityBase implements MenuPr
             if (side == null) {
                 return itemOptional.cast();
             }
-            return LazyOptional.of(() -> new SideItemHandler(config, inventory, this, side)).cast();
+            return LazyOptional.of(() -> new SideItemHandler(config, inventory, side)).cast();
         }
         if (cap == ForgeCapabilities.FLUID_HANDLER) {
             if (side == null) {
@@ -435,7 +434,7 @@ public class BasicFluidMixerBlockEntity extends TileEntityBase implements MenuPr
     }
 
     private IItemHandler createItemHandler(@Nullable Direction side) {
-        return new SideItemHandler(config, inventory, this, side);
+        return new SideItemHandler(config, inventory, side);
     }
 
     private IFluidHandler createCombinedFluidHandler() {

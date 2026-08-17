@@ -12,6 +12,7 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Consumer;
 
 /** 配方生成：输入输出使用明确的记录类型，不再用 Object[][] 拼 JSON。 */
@@ -24,7 +25,7 @@ public class ModRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
         consumer.accept(new MixingFinishedRecipe(
-              new ResourceLocation(c2f4nfluidcrafting.MODID, "mixing/water_lava"),
+              Objects.requireNonNull(ResourceLocation.tryParse(c2f4nfluidcrafting.MODID + ":mixing/water_lava")),
               200,
               List.of(
                     new FluidInputData("minecraft:water", null, 1000),

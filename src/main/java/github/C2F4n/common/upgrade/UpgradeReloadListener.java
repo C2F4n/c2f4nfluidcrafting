@@ -45,7 +45,7 @@ public class UpgradeReloadListener extends SimpleJsonResourceReloadListener {
                 continue;
             }
             String itemId = json.has("item") ? json.get("item").getAsString()
-                  : new ResourceLocation(id.getNamespace(), id.getPath()).toString();
+                  : id.toString();
             ResourceLocation parsedItemId = ResourceLocation.tryParse(itemId);
             Item item = parsedItemId == null ? null : ForgeRegistries.ITEMS.getValue(parsedItemId);
             if (item == null || item == Items.AIR) {

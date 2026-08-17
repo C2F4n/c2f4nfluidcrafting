@@ -90,8 +90,7 @@ public class ModLangProvider extends LanguageProvider {
         add("tooltip.c2f4nfluidcrafting.fluids", locale.equals("zh_cn") ? "流体" : "Fluids");
         add("tooltip.c2f4nfluidcrafting.items", locale.equals("zh_cn") ? "物品" : "Items");
         add("tooltip.c2f4nfluidcrafting.empty", locale.equals("zh_cn") ? "无" : "None");
-        add("tooltip.c2f4nfluidcrafting.fluid_amount",
-              locale.equals("zh_cn") ? "%s / %s mB" : "%s / %s mB");
+        add("tooltip.c2f4nfluidcrafting.fluid_amount", "%s / %s mB");
         add("tooltip.c2f4nfluidcrafting.redstone_mode", locale.equals("zh_cn") ? "红石模式" : "Redstone Mode");
         add("tooltip.c2f4nfluidcrafting.redstone_mode_off", locale.equals("zh_cn") ? "关" : "Off");
         add("tooltip.c2f4nfluidcrafting.redstone_mode_on_signal", locale.equals("zh_cn") ? "有则工作" : "Work With Signal");

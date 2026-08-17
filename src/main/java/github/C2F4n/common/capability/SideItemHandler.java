@@ -1,7 +1,5 @@
 package github.C2F4n.common.capability;
 
-import github.C2F4n.common.inventory.slot.BasicInventorySlot;
-import github.C2F4n.common.tile.base.TileEntityBase;
 import github.C2F4n.common.tile.component.TileComponentConfig;
 import github.C2F4n.common.tile.component.TileComponentInventory;
 import github.C2F4n.common.tile.component.config.DataType;
@@ -17,15 +15,13 @@ public class SideItemHandler implements IItemHandler {
 
     private final TileComponentConfig config;
     private final TileComponentInventory inventory;
-    private final TileEntityBase tile;
     @Nullable
     private final Direction side;
 
     public SideItemHandler(TileComponentConfig config, TileComponentInventory inventory,
-                           TileEntityBase tile, @Nullable Direction side) {
+                           @Nullable Direction side) {
         this.config = config;
         this.inventory = inventory;
-        this.tile = tile;
         this.side = side;
     }
 

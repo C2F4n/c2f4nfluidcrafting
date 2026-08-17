@@ -12,6 +12,8 @@ import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
+import java.util.Objects;
+
 /** 方块状态与方块物品模型：沿用 Blockbench 静态模型，只生成朝向变体。 */
 public class ModBlockStateProvider extends BlockStateProvider {
 
@@ -21,7 +23,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        var model = models().getExistingFile(new ResourceLocation(c2f4nfluidcrafting.MODID, "block/basicfluidmixer"));
+        var model = models().getExistingFile(Objects.requireNonNull(
+              ResourceLocation.tryParse(c2f4nfluidcrafting.MODID + ":block/basicfluidmixer")));
         getVariantBuilder(ModBlocks.BASIC_FLUID_MIXER.get()).forAllStates(state -> {
             Direction facing = state.getValue(BasicFluidMixerBlock.FACING);
             int rotation = switch (facing) {
@@ -34,7 +37,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
 
         ItemModelBuilder item = itemModels().withExistingParent("basicfluidmixer",
-              new ResourceLocation(c2f4nfluidcrafting.MODID, "block/basicfluidmixer"));
+              Objects.requireNonNull(ResourceLocation.tryParse(c2f4nfluidcrafting.MODID + ":block/basicfluidmixer")));
         item.transforms()
               .transform(ItemDisplayContext.GUI).rotation(30, 225, 0).translation(0, 0, 0).scale(0.625f).end()
               .transform(ItemDisplayContext.GROUND).rotation(0, 0, 0).translation(0, 3, 0).scale(0.25f).end()

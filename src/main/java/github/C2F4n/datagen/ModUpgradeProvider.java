@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
 /** 升级卡定义数据生成：输出 data/c2f4nfluidcrafting/upgrades/*.json。 */
@@ -42,7 +43,8 @@ public class ModUpgradeProvider implements DataProvider {
         json.addProperty("type", type);
         json.addProperty("speed_multiplier", speedMultiplier);
         json.addProperty("max_count", maxCount);
-        Path output = pathProvider.json(new ResourceLocation(c2f4nfluidcrafting.MODID, name));
+        Path output = pathProvider.json(Objects.requireNonNull(
+              ResourceLocation.tryParse(c2f4nfluidcrafting.MODID + ":" + name)));
         tasks.add(DataProvider.saveStable(cache, json, output));
     }
 

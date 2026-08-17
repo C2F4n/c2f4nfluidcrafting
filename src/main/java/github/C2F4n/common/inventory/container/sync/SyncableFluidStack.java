@@ -1,7 +1,6 @@
 package github.C2F4n.common.inventory.container.sync;
 
 import github.C2F4n.common.network.to_client.PacketUpdateContainer;
-import net.minecraft.network.FriendlyByteBuf;
 import net.minecraftforge.fluids.FluidStack;
 
 import java.util.function.Consumer;

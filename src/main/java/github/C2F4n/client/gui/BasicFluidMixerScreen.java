@@ -2,7 +2,6 @@ package github.C2F4n.client.gui;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import github.C2F4n.block.entity.MiningMode;
-import github.C2F4n.client.gui.element.GuiButton;
 import github.C2F4n.client.gui.element.GuiElement;
 import github.C2F4n.client.gui.element.GuiSideTab;
 import github.C2F4n.client.gui.element.GuiTankGauge;

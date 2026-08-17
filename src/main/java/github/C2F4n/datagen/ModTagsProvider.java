@@ -3,15 +3,13 @@ package github.C2F4n.datagen;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import github.C2F4n.c2f4nfluidcrafting;
-import github.C2F4n.registry.ModBlocks;
-import github.C2F4n.registry.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-import java.nio.file.Path;
+import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
 /** 标签生成：可镐挖 + 升级物品标签。 */
@@ -41,9 +39,11 @@ public class ModTagsProvider implements DataProvider {
         upgrades.add("values", upgradeValues);
 
         CompletableFuture<?> first = DataProvider.saveStable(cache, pickaxe,
-              blockTagPath.json(new net.minecraft.resources.ResourceLocation("minecraft", "mineable/pickaxe")));
+              blockTagPath.json(Objects.requireNonNull(
+                    net.minecraft.resources.ResourceLocation.tryParse("minecraft:mineable/pickaxe"))));
         CompletableFuture<?> second = DataProvider.saveStable(cache, upgrades,
-              itemTagPath.json(new net.minecraft.resources.ResourceLocation(c2f4nfluidcrafting.MODID, "upgrades")));
+              itemTagPath.json(Objects.requireNonNull(
+                    net.minecraft.resources.ResourceLocation.tryParse(c2f4nfluidcrafting.MODID + ":upgrades"))));
         return CompletableFuture.allOf(first, second);
     }
 
