@@ -1,0 +1,557 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"render_type": "cutout",
+	"textures": {
+		"0": "c2f4nfluidcrafting:block/flowingwater",
+		"1": "c2f4nfluidcrafting:block/flowinglava",
+		"2": "c2f4nfluidcrafting:block/watergalss",
+		"3": "c2f4nfluidcrafting:block/lavaglass",
+		"4": "c2f4nfluidcrafting:block/flowingfinishedliquidandglass",
+		"5": "c2f4nfluidcrafting:block/flowingrawliquid_1",
+		"6": "c2f4nfluidcrafting:block/flowingrawliquid_2",
+		"7": "c2f4nfluidcrafting:block/flowingrawliquid_3",
+		"8": "c2f4nfluidcrafting:block/texture",
+		"9": "c2f4nfluidcrafting:block/texture2",
+		"10": "c2f4nfluidcrafting:block/texture3",
+		"11": "c2f4nfluidcrafting:block/texture4",
+		"12": "c2f4nfluidcrafting:block/texture5",
+		"13": "c2f4nfluidcrafting:block/texture6",
+		"14": "c2f4nfluidcrafting:block/texture7",
+		"15": "c2f4nfluidcrafting:block/texture0",
+		"16": "c2f4nfluidcrafting:block/texture8",
+		"17": "c2f4nfluidcrafting:block/texture9",
+		"18": "c2f4nfluidcrafting:block/texture10",
+		"19": "c2f4nfluidcrafting:block/texture11",
+		"20": "c2f4nfluidcrafting:block/texture12",
+		"21": "c2f4nfluidcrafting:block/texture13",
+		"22": "c2f4nfluidcrafting:block/texture14",
+		"23": "c2f4nfluidcrafting:block/texture15",
+		"24": "c2f4nfluidcrafting:block/texture16",
+		"25": "c2f4nfluidcrafting:block/texture17",
+		"26": "c2f4nfluidcrafting:block/texture18",
+		"27": "c2f4nfluidcrafting:block/texture19",
+		"28": "c2f4nfluidcrafting:block/texture20",
+		"29": "c2f4nfluidcrafting:block/texture21",
+		"30": "c2f4nfluidcrafting:block/texture22",
+		"31": "c2f4nfluidcrafting:block/texture23",
+		"32": "c2f4nfluidcrafting:block/texture24",
+		"33": "c2f4nfluidcrafting:block/texture25",
+		"particle": "c2f4nfluidcrafting:block/flowingwater"
+	},
+	"elements": [
+		{
+			"name": "底块",
+			"from": [0, 0, 0],
+			"to": [16, 2, 16],
+			"faces": {
+				"north": {"uv": [8, 0, 16, 1], "texture": "#8"},
+				"east": {"uv": [8, 1, 16, 2], "texture": "#8"},
+				"south": {"uv": [8, 2, 16, 3], "texture": "#8"},
+				"west": {"uv": [8, 3, 16, 4], "texture": "#8"},
+				"up": {"uv": [8, 8, 0, 0], "texture": "#8"},
+				"down": {"uv": [8, 8, 0, 16], "texture": "#8"}
+			}
+		},
+		{
+			"name": "中心大块",
+			"from": [3, 2, 3],
+			"to": [13, 13, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 2, 6]},
+			"faces": {
+				"north": {"uv": [0, 5.5, 2.5, 8.25], "texture": "#15"},
+				"east": {"uv": [0, 0, 3, 2.75], "texture": "#15"},
+				"south": {"uv": [5.5, 0, 8, 2.75], "texture": "#15"},
+				"west": {"uv": [0, 2.75, 3, 5.5], "texture": "#15"},
+				"up": {"uv": [5.5, 3, 3, 0], "texture": "#15"},
+				"down": {"uv": [5.5, 3, 3, 6], "texture": "#15"}
+			}
+		},
+		{
+			"name": "岩浆与水底部背板",
+			"from": [13, 2, 4],
+			"to": [14, 13, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [13, 5, 7]},
+			"faces": {
+				"north": {"uv": [0, 5.5, 0.5, 11], "texture": "#28"},
+				"east": {"uv": [0, 0, 4.5, 5.5], "texture": "#28"},
+				"south": {"uv": [0.5, 5.5, 1, 11], "texture": "#28"},
+				"west": {"uv": [4.5, 0, 9, 5.5], "texture": "#28"},
+				"up": {"uv": [1.5, 10, 1, 5.5], "texture": "#28"},
+				"down": {"uv": [2, 5.5, 1.5, 10], "texture": "#28"}
+			}
+		},
+		{
+			"name": "成品液体输出底部背板",
+			"from": [2, 2, 4],
+			"to": [3, 13, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1, 5, 7]},
+			"faces": {
+				"north": {"uv": [0, 5.5, 0.5, 11], "texture": "#30"},
+				"east": {"uv": [0, 0, 5, 5.5], "texture": "#30"},
+				"south": {"uv": [0.5, 5.5, 1, 11], "texture": "#30"},
+				"west": {"uv": [5, 0, 10, 5.5], "texture": "#30"},
+				"up": {"uv": [1.5, 10.5, 1, 5.5], "texture": "#30"},
+				"down": {"uv": [2, 5.5, 1.5, 10.5], "texture": "#30"}
+			}
+		},
+		{
+			"name": "熔岩与水的隔板",
+			"from": [15, 2, 7],
+			"to": [16, 13, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [15, 3, 7]},
+			"faces": {
+				"north": {"uv": [4, 0, 5, 11], "texture": "#26"},
+				"east": {"uv": [0, 0, 2, 11], "texture": "#26"},
+				"south": {"uv": [5, 0, 6, 11], "texture": "#26"},
+				"west": {"uv": [2, 0, 4, 11], "texture": "#26"},
+				"up": {"uv": [7, 2, 6, 0], "texture": "#26"},
+				"down": {"uv": [7, 2, 6, 4], "texture": "#26"}
+			}
+		},
+		{
+			"name": "三槽上顶盖",
+			"from": [0, 12, 0],
+			"to": [16, 13, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 12, 0]},
+			"faces": {
+				"north": {"uv": [0, 6, 16, 7], "texture": "#16"},
+				"east": {"uv": [0, 8, 3, 9], "texture": "#16"},
+				"south": {"uv": [0, 7, 16, 8], "texture": "#16"},
+				"west": {"uv": [3, 8, 6, 9], "texture": "#16"},
+				"up": {"uv": [16, 3, 0, 0], "texture": "#16"},
+				"down": {"uv": [16, 3, 0, 6], "texture": "#16"}
+			}
+		},
+		{
+			"name": "顶板",
+			"from": [0, 13, 3],
+			"to": [3, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 13, 0]},
+			"faces": {
+				"north": {"uv": [3, 3, 4.5, 4.5], "texture": "#25"},
+				"east": {"uv": [0, 0, 6.5, 1.5], "texture": "#25"},
+				"south": {"uv": [3, 4.5, 4.5, 6], "texture": "#25"},
+				"west": {"uv": [0, 1.5, 6.5, 3], "texture": "#25"},
+				"up": {"uv": [1.5, 9.5, 0, 3], "texture": "#25"},
+				"down": {"uv": [3, 3, 1.5, 9.5], "texture": "#25"}
+			}
+		},
+		{
+			"name": "顶板",
+			"from": [13, 13, 3],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [13, 13, 0]},
+			"faces": {
+				"north": {"uv": [3, 3, 4.5, 4.5], "texture": "#24"},
+				"east": {"uv": [0, 0, 6.5, 1.5], "texture": "#24"},
+				"south": {"uv": [3, 4.5, 4.5, 6], "texture": "#24"},
+				"west": {"uv": [0, 1.5, 6.5, 3], "texture": "#24"},
+				"up": {"uv": [1.5, 9.5, 0, 3], "texture": "#24"},
+				"down": {"uv": [3, 3, 1.5, 9.5], "texture": "#24"}
+			}
+		},
+		{
+			"name": "挡板",
+			"from": [13, 2, 12],
+			"to": [16, 13, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [14, 11, 12]},
+			"faces": {
+				"north": {"uv": [4, 0, 5.5, 5.5], "texture": "#29"},
+				"east": {"uv": [0, 0, 2, 5.5], "texture": "#29"},
+				"south": {"uv": [0, 5.5, 1.5, 11], "texture": "#29"},
+				"west": {"uv": [2, 0, 4, 5.5], "texture": "#29"},
+				"up": {"uv": [7, 2, 5.5, 0], "texture": "#29"},
+				"down": {"uv": [3, 5.5, 1.5, 7.5], "texture": "#29"}
+			}
+		},
+		{
+			"from": [3, 13, 3],
+			"to": [13, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 13, 15]},
+			"faces": {
+				"north": {"uv": [0, 8, 5, 9.5], "texture": "#23"},
+				"east": {"uv": [0, 6.5, 6.5, 8], "texture": "#23"},
+				"south": {"uv": [5, 8, 10, 9.5], "texture": "#23"},
+				"west": {"uv": [6.5, 6.5, 13, 8], "texture": "#23"},
+				"up": {"uv": [5, 6.5, 0, 0], "texture": "#23"},
+				"down": {"uv": [10, 0, 5, 6.5], "texture": "#23"}
+			}
+		},
+		{
+			"from": [11, 4, 15],
+			"to": [13, 11, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 9, 15]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 14], "texture": "#31"},
+				"east": {"uv": [8, 0, 10, 14], "texture": "#31"},
+				"south": {"uv": [4, 0, 8, 14], "texture": "#31"},
+				"west": {"uv": [10, 0, 12, 14], "texture": "#31"},
+				"up": {"uv": [16, 2, 12, 0], "texture": "#31"},
+				"down": {"uv": [16, 2, 12, 4], "texture": "#31"}
+			}
+		},
+		{
+			"from": [3, 8, 15],
+			"to": [11, 9, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 7, 15]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 2], "texture": "#32"},
+				"east": {"uv": [0, 8, 2, 10], "texture": "#32"},
+				"south": {"uv": [0, 2, 16, 4], "texture": "#32"},
+				"west": {"uv": [2, 8, 4, 10], "texture": "#32"},
+				"up": {"uv": [16, 6, 0, 4], "texture": "#32"},
+				"down": {"uv": [16, 6, 0, 8], "texture": "#32"}
+			}
+		},
+		{
+			"from": [3, 6, 15],
+			"to": [11, 7, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 5, 15]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 2], "texture": "#33"},
+				"east": {"uv": [0, 8, 2, 10], "texture": "#33"},
+				"south": {"uv": [0, 2, 16, 4], "texture": "#33"},
+				"west": {"uv": [2, 8, 4, 10], "texture": "#33"},
+				"up": {"uv": [16, 6, 0, 4], "texture": "#33"},
+				"down": {"uv": [16, 6, 0, 8], "texture": "#33"}
+			}
+		},
+		{
+			"from": [14, 14, 2],
+			"to": [15, 15, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [13, 13, 1]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 1], "texture": "#18"},
+				"east": {"uv": [0, 1, 1, 2], "texture": "#18"},
+				"south": {"uv": [1, 0, 2, 1], "texture": "#18"},
+				"west": {"uv": [1, 1, 2, 2], "texture": "#18"},
+				"up": {"uv": [1, 3, 0, 2], "texture": "#18"},
+				"down": {"uv": [3, 0, 2, 1], "texture": "#18"}
+			}
+		},
+		{
+			"from": [1, 14, 2],
+			"to": [2, 15, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 13, 1]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 1], "texture": "#22"},
+				"east": {"uv": [0, 1, 1, 2], "texture": "#22"},
+				"south": {"uv": [1, 0, 2, 1], "texture": "#22"},
+				"west": {"uv": [1, 1, 2, 2], "texture": "#22"},
+				"up": {"uv": [1, 3, 0, 2], "texture": "#22"},
+				"down": {"uv": [3, 0, 2, 1], "texture": "#22"}
+			}
+		},
+		{
+			"from": [14, 13, 1],
+			"to": [15, 15, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [13, 13, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 2], "texture": "#17"},
+				"east": {"uv": [1, 0, 2, 2], "texture": "#17"},
+				"south": {"uv": [0, 2, 1, 4], "texture": "#17"},
+				"west": {"uv": [2, 0, 3, 2], "texture": "#17"},
+				"up": {"uv": [2, 3, 1, 2], "texture": "#17"},
+				"down": {"uv": [3, 2, 2, 3], "texture": "#17"}
+			}
+		},
+		{
+			"from": [6, 13, 1],
+			"to": [10, 15, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 13, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 2], "texture": "#19"},
+				"east": {"uv": [4, 1, 5, 3], "texture": "#19"},
+				"south": {"uv": [0, 2, 4, 4], "texture": "#19"},
+				"west": {"uv": [4, 3, 5, 5], "texture": "#19"},
+				"up": {"uv": [4, 5, 0, 4], "texture": "#19"},
+				"down": {"uv": [8, 0, 4, 1], "texture": "#19"}
+			}
+		},
+		{
+			"from": [6, 14, 2],
+			"to": [10, 15, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 13, 1]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 1], "texture": "#20"},
+				"east": {"uv": [0, 4, 1, 5], "texture": "#20"},
+				"south": {"uv": [0, 1, 4, 2], "texture": "#20"},
+				"west": {"uv": [4, 0, 5, 1], "texture": "#20"},
+				"up": {"uv": [4, 3, 0, 2], "texture": "#20"},
+				"down": {"uv": [4, 3, 0, 4], "texture": "#20"}
+			}
+		},
+		{
+			"from": [1, 13, 1],
+			"to": [2, 15, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 13, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 2], "texture": "#21"},
+				"east": {"uv": [1, 0, 2, 2], "texture": "#21"},
+				"south": {"uv": [0, 2, 1, 4], "texture": "#21"},
+				"west": {"uv": [2, 0, 3, 2], "texture": "#21"},
+				"up": {"uv": [2, 3, 1, 2], "texture": "#21"},
+				"down": {"uv": [3, 2, 2, 3], "texture": "#21"}
+			}
+		},
+		{
+			"name": "储罐玻璃内区域",
+			"from": [13, 2, 0],
+			"to": [16, 12, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [13, 2, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 10], "texture": "#5"},
+				"east": {"uv": [3, 0, 6, 10], "texture": "#5"},
+				"south": {"uv": [6, 0, 9, 10], "texture": "#5"},
+				"west": {"uv": [9, 0, 12, 10], "texture": "#5"},
+				"up": {"uv": [3, 13, 0, 10], "texture": "#5"},
+				"down": {"uv": [6, 10, 3, 13], "texture": "#5"}
+			}
+		},
+		{
+			"name": "储罐玻璃内区域",
+			"from": [5, 2, 0],
+			"to": [11, 12, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 2, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 5], "texture": "#6"},
+				"east": {"uv": [0, 5, 1.5, 10], "texture": "#6"},
+				"south": {"uv": [3, 0, 6, 5], "texture": "#6"},
+				"west": {"uv": [1.5, 5, 3, 10], "texture": "#6"},
+				"up": {"uv": [6, 6.5, 3, 5], "texture": "#6"},
+				"down": {"uv": [9, 0, 6, 1.5], "texture": "#6"}
+			}
+		},
+		{
+			"name": "储罐玻璃内区域",
+			"from": [0, 2, 0],
+			"to": [3, 12, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 2, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 10], "texture": "#7"},
+				"east": {"uv": [3, 0, 6, 10], "texture": "#7"},
+				"south": {"uv": [6, 0, 9, 10], "texture": "#7"},
+				"west": {"uv": [9, 0, 12, 10], "texture": "#7"},
+				"up": {"uv": [3, 13, 0, 10], "texture": "#7"},
+				"down": {"uv": [6, 10, 3, 13], "texture": "#7"}
+			}
+		},
+		{
+			"name": "挡板",
+			"from": [3, 2, 0],
+			"to": [4, 12, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [3, 5, 0]},
+			"faces": {
+				"north": {"uv": [6, 0, 7, 10], "texture": "#12"},
+				"east": {"uv": [0, 0, 3, 10], "texture": "#12"},
+				"south": {"uv": [7, 0, 8, 10], "texture": "#12"},
+				"west": {"uv": [3, 0, 6, 10], "texture": "#12"},
+				"up": {"uv": [9, 3, 8, 0], "texture": "#12"},
+				"down": {"uv": [9, 3, 8, 6], "texture": "#12"}
+			}
+		},
+		{
+			"name": "挡板",
+			"from": [0, 2, 3],
+			"to": [3, 13, 4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 5, 1]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 11], "texture": "#13"},
+				"east": {"uv": [6, 0, 7, 11], "texture": "#13"},
+				"south": {"uv": [3, 0, 6, 11], "texture": "#13"},
+				"west": {"uv": [7, 0, 8, 11], "texture": "#13"},
+				"up": {"uv": [11, 1, 8, 0], "texture": "#13"},
+				"down": {"uv": [11, 1, 8, 2], "texture": "#13"}
+			}
+		},
+		{
+			"name": "挡板",
+			"from": [0, 2, 14],
+			"to": [3, 13, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 5, 12]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 11], "texture": "#27"},
+				"east": {"uv": [6, 0, 8, 11], "texture": "#27"},
+				"south": {"uv": [3, 0, 6, 11], "texture": "#27"},
+				"west": {"uv": [8, 0, 10, 11], "texture": "#27"},
+				"up": {"uv": [13, 2, 10, 0], "texture": "#27"},
+				"down": {"uv": [13, 2, 10, 4], "texture": "#27"}
+			}
+		},
+		{
+			"name": "挡板",
+			"from": [4, 2, 0],
+			"to": [5, 12, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 5, 0]},
+			"faces": {
+				"north": {"uv": [6, 0, 7, 10], "texture": "#11"},
+				"east": {"uv": [0, 0, 3, 10], "texture": "#11"},
+				"south": {"uv": [7, 0, 8, 10], "texture": "#11"},
+				"west": {"uv": [3, 0, 6, 10], "texture": "#11"},
+				"up": {"uv": [9, 3, 8, 0], "texture": "#11"},
+				"down": {"uv": [9, 3, 8, 6], "texture": "#11"}
+			}
+		},
+		{
+			"name": "挡板",
+			"from": [11, 2, 0],
+			"to": [12, 12, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 5, 0]},
+			"faces": {
+				"north": {"uv": [6, 0, 7, 10], "texture": "#10"},
+				"east": {"uv": [0, 0, 3, 10], "texture": "#10"},
+				"south": {"uv": [7, 0, 8, 10], "texture": "#10"},
+				"west": {"uv": [3, 0, 6, 10], "texture": "#10"},
+				"up": {"uv": [9, 3, 8, 0], "texture": "#10"},
+				"down": {"uv": [9, 3, 8, 6], "texture": "#10"}
+			}
+		},
+		{
+			"name": "挡板",
+			"from": [12, 2, 0],
+			"to": [13, 12, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [12, 5, 0]},
+			"faces": {
+				"north": {"uv": [6, 0, 7, 10], "texture": "#9"},
+				"east": {"uv": [0, 0, 3, 10], "texture": "#9"},
+				"south": {"uv": [7, 0, 8, 10], "texture": "#9"},
+				"west": {"uv": [3, 0, 6, 10], "texture": "#9"},
+				"up": {"uv": [9, 3, 8, 0], "texture": "#9"},
+				"down": {"uv": [9, 3, 8, 6], "texture": "#9"}
+			}
+		},
+		{
+			"name": "挡板",
+			"from": [13, 2, 3],
+			"to": [16, 13, 4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [15, 5, 3]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 11], "texture": "#14"},
+				"east": {"uv": [6, 0, 7, 11], "texture": "#14"},
+				"south": {"uv": [3, 0, 6, 11], "texture": "#14"},
+				"west": {"uv": [7, 0, 8, 11], "texture": "#14"},
+				"up": {"uv": [11, 1, 8, 0], "texture": "#14"},
+				"down": {"uv": [11, 1, 8, 2], "texture": "#14"}
+			}
+		},
+		{
+			"name": "熔岩",
+			"from": [14, 2, 4],
+			"to": [15, 13, 7],
+			"rotation": {"angle": 0, "axis": "y", "origin": [14, 5, 5]},
+			"faces": {
+				"north": {"uv": [6, 0, 7, 11], "texture": "#1"},
+				"east": {"uv": [0, 0, 3, 11], "texture": "#1"},
+				"south": {"uv": [7, 0, 8, 11], "texture": "#1"},
+				"west": {"uv": [3, 0, 6, 11], "texture": "#1"},
+				"up": {"uv": [9, 3, 8, 0], "texture": "#1"},
+				"down": {"uv": [9, 3, 8, 6], "texture": "#1"}
+			}
+		},
+		{
+			"name": "水",
+			"from": [14, 2, 9],
+			"to": [15, 13, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [14, 5, 9]},
+			"faces": {
+				"north": {"uv": [6, 0, 7, 11], "texture": "#0"},
+				"east": {"uv": [0, 0, 3, 11], "texture": "#0"},
+				"south": {"uv": [7, 0, 8, 11], "texture": "#0"},
+				"west": {"uv": [3, 0, 6, 11], "texture": "#0"},
+				"up": {"uv": [9, 3, 8, 0], "texture": "#0"},
+				"down": {"uv": [9, 3, 8, 6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "waterglass",
+			"from": [15, 2, 4],
+			"to": [16, 13, 7],
+			"rotation": {"angle": 0, "axis": "y", "origin": [15, 3, 5]},
+			"faces": {
+				"north": {"uv": [6, 0, 7, 11], "texture": "#2"},
+				"east": {"uv": [0, 0, 3, 11], "texture": "#2"},
+				"south": {"uv": [7, 0, 8, 11], "texture": "#2"},
+				"west": {"uv": [3, 0, 6, 11], "texture": "#2"},
+				"up": {"uv": [9, 3, 8, 0], "texture": "#2"},
+				"down": {"uv": [9, 3, 8, 6], "texture": "#2"}
+			}
+		},
+		{
+			"name": "lavaglass",
+			"from": [15, 2, 9],
+			"to": [16, 13, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [15, 3, 10]},
+			"faces": {
+				"north": {"uv": [6, 0, 7, 11], "texture": "#3"},
+				"east": {"uv": [0, 0, 3, 11], "texture": "#3"},
+				"south": {"uv": [7, 0, 8, 11], "texture": "#3"},
+				"west": {"uv": [3, 0, 6, 11], "texture": "#3"},
+				"up": {"uv": [9, 3, 8, 0], "texture": "#3"},
+				"down": {"uv": [9, 3, 8, 6], "texture": "#3"}
+			}
+		},
+		{
+			"name": "流体槽",
+			"from": [0, 2, 4],
+			"to": [2, 13, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 3, 8]},
+			"faces": {
+				"north": {"uv": [0, 5.5, 1, 11], "texture": "#4"},
+				"east": {"uv": [0, 0, 5, 5.5], "texture": "#4"},
+				"south": {"uv": [1, 5.5, 2, 11], "texture": "#4"},
+				"west": {"uv": [5, 0, 10, 5.5], "texture": "#4"},
+				"up": {"uv": [3, 10.5, 2, 5.5], "texture": "#4"},
+				"down": {"uv": [4, 5.5, 3, 10.5], "texture": "#4"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "主体大块",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 8,
+			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+		},
+		{
+			"name": "液体槽1",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [19]
+		},
+		{
+			"name": "液体槽2",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [20]
+		},
+		{
+			"name": "液体槽3",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [21]
+		},
+		22,
+		23,
+		24,
+		25,
+		26,
+		27,
+		28,
+		29,
+		30,
+		31,
+		32,
+		{
+			"name": "成品流体槽",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [33]
+		}
+	]
+}

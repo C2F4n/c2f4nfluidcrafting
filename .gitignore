@@ -1,0 +1,33 @@
+# --- Gradle ---
+.gradle/
+build/
+out/
+
+# --- ForgeGradle 开发运行目录（会随构建重新生成） ---
+run/
+run-data/
+
+# --- 其他生成物与临时目录 ---
+logs/
+net/
+patches/
+*.log
+*.tmp
+hs_err_pid*.log
+replay_pid*.log
+
+# --- IDE ---
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+bin/
+
+# --- 系统文件 ---
+Thumbs.db
+.DS_Store
+desktop.ini

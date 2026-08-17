@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "c2f4nfluidcrafting:item/speed_upgrade_3"
+  }
+}

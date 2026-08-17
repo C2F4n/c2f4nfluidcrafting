@@ -1,0 +1,19 @@
+{
+  "type": "c2f4nfluidcrafting:mixing",
+  "duration": 200,
+  "fluidInputs": [
+    {
+      "amount": 1000,
+      "fluid": "minecraft:water"
+    },
+    {
+      "amount": 1000,
+      "fluid": "minecraft:lava"
+    }
+  ],
+  "priority": 0,
+  "resultFluid": {
+    "amount": 2000,
+    "fluid": "minecraft:water"
+  }
+}

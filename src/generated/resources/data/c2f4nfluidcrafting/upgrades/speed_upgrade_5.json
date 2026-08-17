@@ -1,0 +1,7 @@
+{
+  "type": "speed",
+  "id": "c2f4nfluidcrafting:speed_upgrade_5",
+  "item": "c2f4nfluidcrafting:speed_upgrade_5",
+  "max_count": 4,
+  "speed_multiplier": 1.3
+}

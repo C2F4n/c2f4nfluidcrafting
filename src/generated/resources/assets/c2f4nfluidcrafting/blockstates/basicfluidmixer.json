@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "c2f4nfluidcrafting:block/basicfluidmixer",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "c2f4nfluidcrafting:block/basicfluidmixer"
+    },
+    "facing=south": {
+      "model": "c2f4nfluidcrafting:block/basicfluidmixer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "c2f4nfluidcrafting:block/basicfluidmixer",
+      "y": 270
+    }
+  }
+}
