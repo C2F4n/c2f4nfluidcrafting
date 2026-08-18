@@ -1,0 +1,54 @@
+package github.c2f4n.fluidcrafting.datagen;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import github.c2f4n.fluidcrafting.c2f4nfluidcrafting;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.CachedOutput;
+import net.minecraft.data.DataProvider;
+import net.minecraft.data.PackOutput;
+import net.minecraftforge.common.data.ExistingFileHelper;
+
+import java.util.Objects;
+import java.util.concurrent.CompletableFuture;
+
+/** 标签生成：可镐挖 + 升级物品标签。 */
+public class ModTagsProvider implements DataProvider {
+
+    private final PackOutput.PathProvider blockTagPath;
+    private final PackOutput.PathProvider itemTagPath;
+
+    public ModTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup,
+                           String modid, ExistingFileHelper existing) {
+        this.blockTagPath = output.createPathProvider(PackOutput.Target.DATA_PACK, "tags/blocks");
+        this.itemTagPath = output.createPathProvider(PackOutput.Target.DATA_PACK, "tags/items");
+    }
+
+    @Override
+    public CompletableFuture<?> run(CachedOutput cache) {
+        JsonObject pickaxe = new JsonObject();
+        pickaxe.addProperty("replace", false);
+        JsonArray pickaxeValues = new JsonArray();
+        pickaxeValues.add(c2f4nfluidcrafting.MODID + ":basicfluidmixer");
+        pickaxe.add("values", pickaxeValues);
+
+        JsonObject upgrades = new JsonObject();
+        upgrades.addProperty("replace", false);
+        JsonArray upgradeValues = new JsonArray();
+        upgradeValues.add(c2f4nfluidcrafting.MODID + ":speed_upgrade_1");
+        upgrades.add("values", upgradeValues);
+
+        CompletableFuture<?> first = DataProvider.saveStable(cache, pickaxe,
+              blockTagPath.json(Objects.requireNonNull(
+                    net.minecraft.resources.ResourceLocation.tryParse("minecraft:mineable/pickaxe"))));
+        CompletableFuture<?> second = DataProvider.saveStable(cache, upgrades,
+              itemTagPath.json(Objects.requireNonNull(
+                    net.minecraft.resources.ResourceLocation.tryParse(c2f4nfluidcrafting.MODID + ":upgrades"))));
+        return CompletableFuture.allOf(first, second);
+    }
+
+    @Override
+    public String getName() {
+        return "C2F4n Tags";
+    }
+}
